@@ -5,19 +5,13 @@
          id="WebApp_ID" version="3.0">
     <display-name>share</display-name>
     <welcome-file-list>
-        <welcome-file>/html/index.html</welcome-file>
+        <welcome-file>html/index.html</welcome-file>
         <welcome-file>index.htm</welcome-file>
         <welcome-file>index.jsp</welcome-file>
         <welcome-file>default.html</welcome-file>
         <welcome-file>default.htm</welcome-file>
         <welcome-file>default.jsp</welcome-file>
     </welcome-file-list>
-
-    <servlet>
-        <servlet-name>AppStartup</servlet-name>
-        <servlet-class>com.share.services.ShareStartup</servlet-class>
-        <load-on-startup>1</load-on-startup>
-    </servlet>
 
     <filter>
         <filter-name>LoginFilter</filter-name>
@@ -72,3 +66,6 @@
     </filter-mapping>
 
 </web-app>
+
+
+        <!--~/Documents/google-appengine/appengine-java-sdk-1.9.38/bin$sh appcfg.sh -A testwebsiteunique update /Users/sudharsan-2598/IdeaProjects/sharemyticket/out/artifacts/webapps -->

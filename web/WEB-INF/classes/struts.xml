@@ -14,18 +14,8 @@
         </interceptors>
         <default-interceptor-ref name="defaultShareStack" />
 
-        <!--<action name="getAccounts" class="com.share.client.action.AccountAction"-->
-                <!--method="getAcccountDetails">-->
-            <!--<result name="error">/jsp/Error.jsp</result>-->
-        <!--</action>-->
-
         <action name="getTutorial" class="com.server.test.StrutsTest">
             <result name="success">/jsp/Error.jsp</result>
-            <result name="error">/jsp/Error.jsp</result>
-        </action>
-
-        <action name="irctc" class="com.share.client.action.IRCTCAction">
-            <result name="view">/jsp/IRCTCHome.jsp</result>
             <result name="error">/jsp/Error.jsp</result>
         </action>
 
@@ -94,8 +84,5 @@
         <action name="entertainment" class="com.share.client.action.EntertainmentAction">
             <result name="error">/jsp/Error.jsp</result>
         </action>
-
-
-
     </package>
 </struts>
