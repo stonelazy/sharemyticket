@@ -31,7 +31,11 @@
     </facet>
     <facet type="google-app-engine" name="Google App Engine">
       <configuration>
-        <sdk-home-path>/usr/local/google_appengine</sdk-home-path>
+        <sdk-home-path>$USER_HOME$/Documents/google-appengine/appengine-java-sdk-1.9.38</sdk-home-path>
+        <files-to-enhance>
+          <file path="$MODULE_DIR$/src/main/java" />
+          <file path="$MODULE_DIR$/src/main/resources" />
+        </files-to-enhance>
       </configuration>
     </facet>
   </component>

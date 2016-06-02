@@ -67,5 +67,6 @@
 
 </web-app>
 
+        <!--sh appcfg.sh -A testwebsiteunique update /Users/sudharsan-2598/IdeaProjects/sharemyticket/out/artifacts/webapps-->
 
         <!--~/Documents/google-appengine/appengine-java-sdk-1.9.38/bin$sh appcfg.sh -A testwebsiteunique update /Users/sudharsan-2598/IdeaProjects/sharemyticket/out/artifacts/webapps -->

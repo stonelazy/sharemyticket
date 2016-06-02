@@ -28,10 +28,6 @@
             <result name="error">/jsp/Error.jsp</result>
         </action>
 
-        <action name="ember" class="com.server.test.EmberTest">
-            <result name="error">/jsp/Error.jsp</result>
-        </action>
-
     </package>
 
     <package name="auth" extends="struts-default" namespace="/auth">
