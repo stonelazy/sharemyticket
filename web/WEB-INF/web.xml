@@ -68,5 +68,6 @@
 </web-app>
 
         <!--sh appcfg.sh -A testwebsiteunique update /Users/sudharsan-2598/IdeaProjects/sharemyticket/out/artifacts/webapps-->
-
+        <!--sh dev_appserver.sh /Users/sudharsan-2598/IdeaProjects/sharemyticket/out/artifacts/webapps/-->
         <!--~/Documents/google-appengine/appengine-java-sdk-1.9.38/bin$sh appcfg.sh -A testwebsiteunique update /Users/sudharsan-2598/IdeaProjects/sharemyticket/out/artifacts/webapps -->
+        <!--https://$sharemyticket:bsEQznj4Qe1G7m1J08oTZhXvoybYLZWk8MpQokmToouataZ5YEYzKqr1K3b8@sharemyticket.scm.azurewebsites.net/deploy-->

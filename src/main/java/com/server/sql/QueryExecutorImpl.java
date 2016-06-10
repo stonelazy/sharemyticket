@@ -29,7 +29,7 @@ public class QueryExecutorImpl implements QueryExecutor
 		try (Connection con = SQLUtil.getSqlConnection())
 		{
 			Statement stmt = con.createStatement();
-			stmt.execute("set search_path to share");
+//			stmt.execute("set search_path to share");
 
 			stmt = con.createStatement();
 			

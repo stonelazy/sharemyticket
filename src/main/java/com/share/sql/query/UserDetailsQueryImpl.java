@@ -30,7 +30,7 @@ public class UserDetailsQueryImpl implements UserDetailsQuery
 		try (Connection con = SQLUtil.getSqlConnection())// , timeout))
 		{
 			Statement stmt = con.createStatement();
-			stmt.execute("set search_path to share");
+//			stmt.execute("set search_path to share");
 
 			String sql = "Select * from Users WHERE Email = \'" + SQLUtil.escapeSQL(email) + "\'"; // No I18N
 
@@ -41,7 +41,7 @@ public class UserDetailsQueryImpl implements UserDetailsQuery
 		}
 		finally
 		{
-			logger.fine("useraccount> " + userAccount);
+			logger.info("useraccount> " + userAccount);
 		}
 		return userAccount;
 	}
@@ -80,7 +80,7 @@ public class UserDetailsQueryImpl implements UserDetailsQuery
 		try (Connection con = SQLUtil.getSqlConnection())// , timeout))
 		{
 			Statement stmt = con.createStatement();
-			stmt.execute("set search_path to share");
+//			stmt.execute("set search_path to share");
 
 			String sql = "Select * from " + Users.TABLE_NAME + " WHERE " + Users.COOKIE+"= \'" + cookie.toString() + "\'"; // No I18N
 			logger.info("select query>>>>" + sql);

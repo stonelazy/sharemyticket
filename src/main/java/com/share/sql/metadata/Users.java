@@ -22,6 +22,20 @@ CREATE TABLE Users(
 );
 alter sequence users_users_id_seq start 12000 cache 25;
 
+CREATE TABLE Users(
+USERS_ID BIGINT PRIMARY KEY AUTO_INCREMENT,
+NAME text,
+EMAIL text,
+POSTAL text,
+MOBILE BIGINT,
+AGE SMALLINT,
+IS_MALE BOOLEAN,
+COOKIE text,
+PASSWORD BLOB
+);
+
+insert into users (name,email,COOKIE) values ('test','test@test',uuid());
+
  */
 public class Users
 {
@@ -31,7 +45,7 @@ public class Users
 	public static final String EMAIL = "EMAIL";
 	public static final String POSTAL = "POSTAL";
 	public static final String MOBILE = "MOBILE";
-	public static final String SEX = "SEX";
+	public static final String IS_MALE = "IS_MALE";
 	public static final String COOKIE = "COOKIE";
 	public static final String PASSWORD = "PASSWORD";
 	public static final String AGE = "AGE";

@@ -59,7 +59,7 @@ public class SQLUtil
 		try (Connection con = cpm.getConnection(POOL_1))
 		{
 			Statement stmt = con.createStatement();
-			stmt.execute("set search_path to " + APP_SCHEMA);
+//			stmt.execute("set search_path to " + APP_SCHEMA);
 		}
 	}
 

@@ -26,7 +26,22 @@ CREATE TABLE Sell(
 	STATUS smallint DEFAULT 0,
 	REQUEST_TIME BIGINT
 );
-	 
+
+	  CREATE TABLE Sell(
+	PNR_NUMBER BIGINT PRIMARY KEY,
+	TRAIN_NUMBER BIGINT,
+	FROM_STZ character(4),
+	TO_STZ character(4),
+	DOJ BIGINT,
+	EXTRA_PASSENGER smallint DEFAULT 0,
+	USERS_ID BIGINT,
+	NOTIFY smallint DEFAULT 0,
+	CRITERIA smallint DEFAULT 0,
+	MEDIATE smallint DEFAULT 0,
+	STATUS smallint DEFAULT 0,
+	REQUEST_TIME BIGINT
+);
+
 */
 	public static final String TABLE_NAME="Sell";
 	public static final String SELL_ID= "SELL_ID";

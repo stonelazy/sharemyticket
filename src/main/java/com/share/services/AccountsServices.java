@@ -10,9 +10,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
+import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.regex.Matcher;
@@ -67,10 +65,22 @@ public class AccountsServices
 		{
 			try (Connection con = SQLUtil.getSqlConnection())// , timeout))
 			{
+				logger.info("lets find out the dblist");
+				Statement stmt = con.createStatement();
+
+				ResultSet rs = stmt.executeQuery("SHOW databases");
+				List<String> dbList = new ArrayList<>();
+//asdf
+				while (rs.next())
+				{
+					String db = rs.getString(1);
+					dbList.add(db);
+				}
+				logger.info("dblist>>" + dbList);
 
 				logger.info("con1aasdf>> " + con);
-				Statement stmt = con.createStatement();
-				stmt.execute("set search_path to share");
+				stmt = con.createStatement();
+//				stmt.execute("set search_path to share");
 
 				/*
 				 * PreparedStatement preStatement = null;
@@ -149,14 +159,14 @@ public class AccountsServices
 			try (Connection con = SQLUtil.getSqlConnection())// , timeout))
 			{
 				Statement stmt = con.createStatement();
-				stmt.execute("set search_path to share");
+//				stmt.execute("set search_path to share");
 
 				stmt = con.createStatement();
 
 				email = SQLUtil.escapeSQL(email).toLowerCase().trim();
 				String hashedPassword = SecurityUtil.calculateHMAC(password);
 
-				String sql = "INSERT INTO " + Users.TABLE_NAME + " (" + Users.EMAIL + " ," + Users.PASSWORD + " ) VALUES (\'" + email + "\',\' " + SQLUtil.escapeSQL(hashedPassword) + "\')"; // No I18N
+				String sql = "INSERT INTO " + Users.TABLE_NAME + " (" + Users.EMAIL + " ," + Users.PASSWORD + "," + Users.COOKIE +" ) VALUES (\'" + email + "\',\' " + SQLUtil.escapeSQL(hashedPassword) + "\',UUID())"; // No I18N
 
 				logger.info("insert query >> " + sql);
 				int result = stmt.executeUpdate(sql);
@@ -216,7 +226,7 @@ public class AccountsServices
 		try (Connection con = SQLUtil.getSqlConnection())
 		{
 			Statement stmt = con.createStatement();
-			stmt.execute("set search_path to share");
+//			stmt.execute("set search_path to share");
 
 			stmt = con.createStatement();
 			

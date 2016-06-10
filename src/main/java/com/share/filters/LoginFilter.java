@@ -104,6 +104,10 @@ public class LoginFilter implements Filter
 				{
 					responseJson = MessageConstants.generateJsonForMsg(501, "your pwd is incorrect");
 				}
+				else if (status == MessageConstants.INVALID_PARAM)
+				{
+					responseJson = MessageConstants.generateJsonForMsg(501, "Enter a proper email address");
+				}
 				else
 				{
 					responseJson = MessageConstants.generateJsonForMsg(501, "I don't know.. something is wrong.. pls try later");

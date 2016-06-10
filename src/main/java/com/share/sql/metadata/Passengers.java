@@ -22,6 +22,16 @@ public class Passengers
 	  USERS_ID BIGINT
 	  ); 
 	  alter sequence passengers_passengers_id_seq start 13000 cache 2;
+
+	  CREATE TABLE Passengers
+	  (
+	  PASSENGERS_ID BIGINT AUTO_INCREMENT PRIMARY KEY,
+	  CURRENT_STATUS text,
+	  IDENTIFY_PASSENGER text,
+	  BOOKING_STATUS text,
+	  PNR_NUMBER BIGINT,
+	  USERS_ID BIGINT
+	  );
 	 */
 	public static final String TABLE_NAME = "Passengers";
 	public static final String PASSENGERS_ID = "PASSENGERS_ID";

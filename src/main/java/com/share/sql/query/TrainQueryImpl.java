@@ -45,7 +45,7 @@ public class TrainQueryImpl implements TrainQuery
 		try (Connection con = SQLUtil.getSqlConnection())
 		{
 			Statement stmt = con.createStatement();
-			stmt.execute("set search_path to share");
+//			stmt.execute("set search_path to share");
 
 			stmt = con.createStatement();
 
@@ -90,7 +90,7 @@ public class TrainQueryImpl implements TrainQuery
 		try (Connection con = SQLUtil.getSqlConnection())
 		{
 			Statement stmt = con.createStatement();
-			stmt.execute("set search_path to share");
+//			stmt.execute("set search_path to share");
 
 			stmt = con.createStatement();
 
@@ -163,7 +163,7 @@ public class TrainQueryImpl implements TrainQuery
 		try (Connection con = SQLUtil.getSqlConnection())
 		{
 			Statement stmt = con.createStatement();
-			stmt.execute("set search_path to share");
+//			stmt.execute("set search_path to share");
 
 			stmt = con.createStatement();
 			
@@ -204,7 +204,7 @@ public class TrainQueryImpl implements TrainQuery
 		try (Connection con = SQLUtil.getSqlConnection())
 		{
 			Statement stmt = con.createStatement();
-			stmt.execute("set search_path to share");
+//			stmt.execute("set search_path to share");
 
 			stmt = con.createStatement();
 			
@@ -250,7 +250,7 @@ public class TrainQueryImpl implements TrainQuery
 		try (Connection con = SQLUtil.getSqlConnection())
 		{
 			Statement stmt = con.createStatement();
-			stmt.execute("set search_path to share");
+//			stmt.execute("set search_path to share");
 
 			stmt = con.createStatement();
 			
@@ -309,7 +309,8 @@ public class TrainQueryImpl implements TrainQuery
 				try (Connection con = SQLUtil.getSqlConnection())
 				{
 					Statement stmt = con.createStatement();
-					stmt.execute("set search_path to share");
+//					stmt.execute("set search_path to share");
+
 
 					stmt = con.createStatement();
 					ResultSet rows = stmt.executeQuery(sql);

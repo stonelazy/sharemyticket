@@ -34,8 +34,8 @@ public class JDBCTest
     
 	public static void main(String[] args)
 	{
-		postgresMethod1();
-//		mysqlmethod1();
+//		postgresMethod1();
+		mysqlmethod1();
 //		mysqlmethod2();
 	}
 
@@ -120,7 +120,7 @@ public class JDBCTest
 		    System.out.println("Deleting database...");
 		    stmt = conn.createStatement();
 
-		    ResultSet rs = stmt.executeQuery("show databases;");
+//		    ResultSet rs = stmt.executeQuery("show databases;");
 		    List<String> dbList = new ArrayList<>();
 		    
 		    logger.info("dblist>>" + dbList);

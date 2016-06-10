@@ -15,7 +15,13 @@ public class Upvote
 	UPVOTE_ID BIGSERIAL PRIMARY KEY,
 	USERS_ID BIGINT
 );
+
 alter sequence upvote_upvote_id_seq start 120000 cache 1;
+
+	CREATE TABLE Upvote(
+	UPVOTE_ID BIGINT AUTO_INCREMENT PRIMARY KEY,
+	USERS_ID BIGINT
+);
 			*/
 	
 	public static final String TABLE_NAME="Upvote";
