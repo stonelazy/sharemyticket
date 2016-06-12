@@ -23,7 +23,9 @@
 		<br/><br/>
 		
 		<div id="buyPnrSearch" onclick="buyTrainTkt('buyPnrSearch')" class="btn btn-default btn-primary"> Search </div>
-		
+		<br/><br/>
+		<div id="buyPnrSearchResult"  class="text-warning">  </div>
+
 		</p>
 	</div>
 </body>

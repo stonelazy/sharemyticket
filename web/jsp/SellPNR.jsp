@@ -87,7 +87,7 @@
 		<div id="enterPnrBox" >
 		
 		<h5>Enter the PNR of ticket you would like to Sell.. </h5>
-			<input type="text" id="pnrNumber" value="4631174536">
+			<input type="text" id="pnrNumber" value="">
 			 <br /> <br />
 	
 			<button type="submit" class="btn btn-default" onclick="sellPnrclick('getPnrStatus',pnrNumber)" id="getPnrStatus">Sell PNR</button>

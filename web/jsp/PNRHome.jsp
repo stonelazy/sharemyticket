@@ -9,7 +9,7 @@
 <!-- 	<div id="pnrHome" align="center" style="margin-top: 40px"> -->
 	<div id="pnrHome"  class="text-center free-div">
 		<h5>Enter your PNR Number</h5>
-		<input type="text" id="pnrNumber" value="4631174536"> <br /> <br />
+		<input type="text" id="pnrNumber" value=""> <br /> <br />
 
 		<button type="submit" class="btn btn-default" onclick="pnrStatusClick('getPnrStatus',pnrNumber)" id="getPnrStatus">Get Status</button>
 		

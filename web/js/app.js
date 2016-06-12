@@ -733,6 +733,7 @@ function buyTrainTkt(eventName)
 				data : json
 			}).done(function(data) {
 				$('#actionPage').html(data);
+
 			}).error(function(data) {
 				console.log('you are not signed up ', data);
 				$.get("jsp/SignInConfirmation.jsp", function(msg) {
@@ -769,15 +770,20 @@ function buyTrainTkt(eventName)
 			json.fromStz= $("#fromstz").val();
 			json.toStz= $("#tostz").val();
 			json.doj = $("#datepicker").value;
-			$.ajax({
-				url : 'auth/buyPnr.do',
-				type : 'get',
-				data : json
-			}).done(function(data) {
-				console.log('buypnr result ',data);
-			}).error(function(data) {
-				 console.log('error occurd budy');
-			});
+			if(json.doj && json.toStz && json.fromStz){
+				$.ajax({
+					url : 'auth/buyPnr.do',
+					type : 'get',
+					data : json
+				}).done(function(data) {
+					$('#buyPnrSearchResult').html("Sorry! Tickets not found");
+					console.log('buypnr result ',data);
+				}).error(function(data) {
+					console.log('error occurd budy');
+				});
+			}else{
+				$('#buyPnrSearchResult').html("Enter the info Mofo!");
+			}
 		}
 
 	} else {
@@ -812,7 +818,7 @@ function entertainmentPage(idName, element) {
 			}
 			else
 			{
-				$('#entertainmentActionPage').html('Thanks! Even we are working for the same :) Had we known who you are, we would have notified you through Email');
+				$('#entertainmentActionPage').html('Thanks! Even we are working for the same :) Had we known who you are, we would have notified you through Email once it is ready');
 			}
 		}).error(function(data) {
 

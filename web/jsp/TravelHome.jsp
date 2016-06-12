@@ -39,8 +39,8 @@
 
 <script>
 $(document).ready(function (){
-// 	pnrStatusClick('viewPnr');
-	sellPnrclick('sellPnrNavButton')
+ 	pnrStatusClick('viewPnr');
+//	sellPnrclick('sellPnrNavButton')
 });
 
 </script>

@@ -372,7 +372,7 @@ public class IRCTCAction
 							logger.info("trains avaialble with us sql>> " + sql);
 
 						}
-
+						result=StrutsConstants.NONE;
 						logger.info("getafromastz>> " + getFromStz() + " tostz>> " + getToStz() + "  doj>> " + getDoj());
 					} else {
 						logger.info("no action matched");
